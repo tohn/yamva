@@ -18,19 +18,28 @@ Afterwards, install with node.js:
 	npm install -g phonegap
 	npm install -g plugman
 
+## Setup
+
+First create a new and empty phonegap project (required, this will
+add cordova):
+
+	phonegap create .
+
+Then remove the new www folder and move www-new to www:
+
+	rm -rf www && mv www-new www
+
 Then install the following plugins:
 
 	cordova plugin add https://github.com/phonegap-build/BarcodeScanner
 	cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-camera.git
 	cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-network-information.git
 
-## Setup
-
-Build an Android app with:
+Afterwards, build an Android app with:
 
 	phonegap build android
 
-or install it directly to the attached machine running Android with:
+or install it directly to the attached phone running Android with:
 
 	phonegap run android
 
